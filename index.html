@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>ループシーケンサー</title>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Sequencer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="root"></div>
-  <script type="text/babel" src="app.js"></script>
+    <div id="container">
+        <h1>Loop Sequencer</h1>
+        
+        <!-- Keyboard -->
+        <div id="keyboard"></div>
+        
+        <!-- Sequencer -->
+        <div id="sequencer">
+            <div id="tracks"></div>
+        </div>
+        
+        <!-- Player Controls -->
+        <div id="controls">
+            <button id="play">Play</button>
+            <button id="stop">Stop</button>
+            <button id="loop">Loop: On</button>
+            <button id="record">Record: Off</button>
+            <select id="bpm">
+                <option value="120">BPM: 120</option>
+                <option value="90">90</option>
+                <option value="140">140</option>
+            </select>
+        </div>
+        
+        <!-- Mixer -->
+        <div id="mixer"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
